@@ -1,0 +1,41 @@
+<head>
+</head>
+<body>
+<div class="image"><img src="../../../assets/images/img_4.png" alt="img"></div>
+<div class="image2"><img src="../../../assets/images/img_5.png" alt="img"></div>
+<div class="top">
+  <h1> Happiness Dashboard</h1>
+  <h2> Create your poll! </h2>
+</div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" novalidate>
+  <div class="formm">
+  <div class="form-group">
+    <label for="question">Introduce your question:</label>
+    <div class="input-group">
+      <input type="text" id="question" name="question"  ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="topic">Introduce the topic of your poll:</label>
+    <div class="input-group">
+      <input id="topic" name="topic" type="text" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="keywords">Write the keywords of your poll:</label>
+    <div class="input-group">
+      <input id="keywords" name="keywords" type="text" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Choose an expiration date:</label>
+    <div class="input-group">
+      <input id="expiration_date" name="expiration_date"  type="date" ngModel>
+    </div>
+  </div></div>
+  <div class="container">
+    <button (click)="confirm()" type="submit">Submit</button>
+    </div>
+</form>
+
+</body>

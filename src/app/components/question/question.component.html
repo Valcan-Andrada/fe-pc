@@ -1,0 +1,78 @@
+<script>
+  function myFunction() {
+    document.getElementById("text_id").innerHTML = "display: block";
+  }
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<div class="image"><img src="../../../assets/images/image.png" alt="img"></div>
+<div class="image2"><img src="../../../assets/images/img7.png" alt="img"></div>
+<div class="center">
+  <div class="container">
+    <div class="text">
+      How are you feeling today?
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" novalidate>
+      <div class="line">
+        <input type="range" min="1" max="10" value="5" ngModel>
+      </div>
+      <div class="data">
+        <input type="radio" id="r1" name="choice" value="30" ngModel>
+        <label for="r1">1</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r2" name="choice" value="30" ngModel>
+        <label for="r2">2</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r3" name="choice" value="30" ngModel>
+        <label for="r3">3</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r4" name="choice" value="30" ngModel>
+        <label for="r4">4</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r5" name="choice" value="30" ngModel>
+        <label for="r5">5</label>
+      </div><div class="data">
+        <input type="radio" id="r6" name="choice" value="30" ngModel>
+        <label for="r6">6</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r7" name="choice" value="30" ngModel>
+        <label for="r7">7</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r8" name="choice" value="30" ngModel>
+        <label for="r8">8</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r9" name="choice" value="30" ngModel>
+        <label for="r9">9</label>
+      </div>
+      <div class="data">
+        <input type="radio" id="r10" name="choice" value="30" ngModel>
+        <label for="r10">10</label>
+      </div>
+      <div class="btn">
+        <div class="inner"></div>
+        <button (click)="confirm()" type="submit">Respond</button>
+      </div>
+      <div class="leavecomment">
+        <p>Leave a comment:</p>
+        <input type="text" id="str">
+        <br/>
+        <br/>
+        <button class="buttonn" (click)="post()">Comment</button>
+        <hr>
+        <div class="com">
+        <div class="comentarii" *ngFor="let comm of postcomment">
+          <hr>
+          <p>{{comm}}</p>
+          <hr>
+        </div></div>
+      </div>
+    </form>
+  </div>
+</div>
